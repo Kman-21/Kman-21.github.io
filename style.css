@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav li {
+  margin: 0 1rem;
+}
+main {
+  padding-top: 60px; /* to allow for fixed header height */
+}
+section {
+  padding: 80px 20px;
+}
+.project-card {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.rating {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.rating .star {
+  color: gold;
+}

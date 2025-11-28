@@ -1,6 +1,0 @@
-/* if you scroll a wrapper instead of the page */
-.site-wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-}
