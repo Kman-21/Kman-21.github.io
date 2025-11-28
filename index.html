@@ -1,79 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kman_21 — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
-      color: #333;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
     header {
       background: #222;
       color: #fff;
+      padding: 20px 0;
       text-align: center;
-      padding: 2rem 1rem;
     }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
     section {
-      padding: 2rem;
-      max-width: 800px;
+      padding: 40px;
+      max-width: 900px;
       margin: auto;
     }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-    li {
-      margin: 0.5rem 0;
-    }
+
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 20px;
       background: #222;
       color: #fff;
-      margin-top: 2rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Kman_21</h1>
-    <p>Roblox Developer | Game Designer | Programmer | GUI Artist | Builder | Python Developer</p>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="About">
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I’m Kman — I have 2+ years of experience in GUI, I have learned basic scripting, I have been building/modelling for 3+ years.</p>
-    
+    <p>Write a short bio about yourself here. Skills, interests, and what you love to build.</p>
   </section>
 
-  <section id="Projects">
-    <h2>My Projects</h2>
-    <ul>
-      <li><a href="https://discord.gg/23pYbdCUau">Reincarnated Battlegrounds</a> – Battlegrounds game in development, I am The Project Leader.</li>
-    </ul>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects" id="projectGrid"></div>
   </section>
 
-  <section id="What I have done"
-    <h2>What I have done:</h2>
-    <ul>
-      <li><a href="https://media.discordapp.net/attachments/1406646291898826773/1431370781459349674/image.png?ex=690ef7ab&is=690da62b&hm=4ac07a2b447f1924101f2532ffd4064c08c70e3205d47d385f5479567a11b61d&=&format=webp&quality=lossless"<HotBar></a></li>
-      <li><a href="https://media.discordapp.net/attachments/1406646291898826773/1417917322676408330/image.png?ex=690f7669&is=690e24e9&hm=c5914ff40a8cec2bf4045ad0e2a85d977304d76b9dbd224343095319221d416e&=&format=webp&quality=lossless&width=1310&height=401"<LoadingScreen></a></li>
-    </ul>
-      </section>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: you@example.com</p>
+  </section>
 
   <footer>
-    <p>Contact me at <a href="https://discordapp.com/users/1360182331247300618">Discord - kman_21</a></p>
-    <p>© 2025 Kman_21 - All Rights Reserved</p>
+    <p>© 2025 Your Name</p>
   </footer>
+
+  <script>
+    const projects = [
+      { title: "Project One", desc: "Description of project one." },
+      { title: "Project Two", desc: "Description of project two." },
+      { title: "Project Three", desc: "Description of project three." }
+    ];
+
+    const grid = document.getElementById('projectGrid');
+
+    projects.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      card.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p>`;
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
