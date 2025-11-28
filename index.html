@@ -112,5 +112,20 @@
       grid.appendChild(card);
     });
   </script>
+
+  <script>
+    const reviews = [
+      { title: "@ircvi", desc: "" },
+    ];
+
+    const grid = document.getElementById('projectGrid');
+
+    reviews.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      card.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p>`;
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
